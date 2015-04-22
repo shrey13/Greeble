@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		891CAEB31AE852210072B92B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEB21AE852210072B92B /* AppDelegate.swift */; };
+		891CAEB51AE852210072B92B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEB41AE852210072B92B /* ViewController.swift */; };
+		891CAEB81AE852210072B92B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891CAEB61AE852210072B92B /* Main.storyboard */; };
+		891CAEBA1AE852210072B92B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CAEB91AE852210072B92B /* Images.xcassets */; };
+		891CAEBD1AE852210072B92B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891CAEBB1AE852210072B92B /* LaunchScreen.xib */; };
+		891CAEC91AE852210072B92B /* GreebleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEC81AE852210072B92B /* GreebleTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		891CAEC31AE852210072B92B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 891CAEA51AE852210072B92B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 891CAEAC1AE852210072B92B;
+			remoteInfo = Greeble;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		891CAEAD1AE852210072B92B /* Greeble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greeble.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		891CAEB11AE852210072B92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		891CAEB21AE852210072B92B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		891CAEB41AE852210072B92B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		891CAEB71AE852210072B92B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		891CAEB91AE852210072B92B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		891CAEBC1AE852210072B92B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		891CAEC21AE852210072B92B /* GreebleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreebleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		891CAEC71AE852210072B92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		891CAEC81AE852210072B92B /* GreebleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreebleTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		891CAEAA1AE852210072B92B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		891CAEBF1AE852210072B92B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		891CAEA41AE852210072B92B = {
+			isa = PBXGroup;
+			children = (
+				891CAEAF1AE852210072B92B /* Greeble */,
+				891CAEC51AE852210072B92B /* GreebleTests */,
+				891CAEAE1AE852210072B92B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		891CAEAE1AE852210072B92B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				891CAEAD1AE852210072B92B /* Greeble.app */,
+				891CAEC21AE852210072B92B /* GreebleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		891CAEAF1AE852210072B92B /* Greeble */ = {
+			isa = PBXGroup;
+			children = (
+				891CAEB21AE852210072B92B /* AppDelegate.swift */,
+				891CAEB41AE852210072B92B /* ViewController.swift */,
+				891CAEB61AE852210072B92B /* Main.storyboard */,
+				891CAEB91AE852210072B92B /* Images.xcassets */,
+				891CAEBB1AE852210072B92B /* LaunchScreen.xib */,
+				891CAEB01AE852210072B92B /* Supporting Files */,
+			);
+			path = Greeble;
+			sourceTree = "<group>";
+		};
+		891CAEB01AE852210072B92B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				891CAEB11AE852210072B92B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		891CAEC51AE852210072B92B /* GreebleTests */ = {
+			isa = PBXGroup;
+			children = (
+				891CAEC81AE852210072B92B /* GreebleTests.swift */,
+				891CAEC61AE852210072B92B /* Supporting Files */,
+			);
+			path = GreebleTests;
+			sourceTree = "<group>";
+		};
+		891CAEC61AE852210072B92B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				891CAEC71AE852210072B92B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		891CAEAC1AE852210072B92B /* Greeble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 891CAECC1AE852210072B92B /* Build configuration list for PBXNativeTarget "Greeble" */;
+			buildPhases = (
+				891CAEA91AE852210072B92B /* Sources */,
+				891CAEAA1AE852210072B92B /* Frameworks */,
+				891CAEAB1AE852210072B92B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Greeble;
+			productName = Greeble;
+			productReference = 891CAEAD1AE852210072B92B /* Greeble.app */;
+			productType = "com.apple.product-type.application";
+		};
+		891CAEC11AE852210072B92B /* GreebleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 891CAECF1AE852210072B92B /* Build configuration list for PBXNativeTarget "GreebleTests" */;
+			buildPhases = (
+				891CAEBE1AE852210072B92B /* Sources */,
+				891CAEBF1AE852210072B92B /* Frameworks */,
+				891CAEC01AE852210072B92B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				891CAEC41AE852210072B92B /* PBXTargetDependency */,
+			);
+			name = GreebleTests;
+			productName = GreebleTests;
+			productReference = 891CAEC21AE852210072B92B /* GreebleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		891CAEA51AE852210072B92B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Greeblers;
+				TargetAttributes = {
+					891CAEAC1AE852210072B92B = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					891CAEC11AE852210072B92B = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 891CAEAC1AE852210072B92B;
+					};
+				};
+			};
+			buildConfigurationList = 891CAEA81AE852210072B92B /* Build configuration list for PBXProject "Greeble" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 891CAEA41AE852210072B92B;
+			productRefGroup = 891CAEAE1AE852210072B92B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				891CAEAC1AE852210072B92B /* Greeble */,
+				891CAEC11AE852210072B92B /* GreebleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		891CAEAB1AE852210072B92B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				891CAEB81AE852210072B92B /* Main.storyboard in Resources */,
+				891CAEBD1AE852210072B92B /* LaunchScreen.xib in Resources */,
+				891CAEBA1AE852210072B92B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		891CAEC01AE852210072B92B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		891CAEA91AE852210072B92B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				891CAEB51AE852210072B92B /* ViewController.swift in Sources */,
+				891CAEB31AE852210072B92B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		891CAEBE1AE852210072B92B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				891CAEC91AE852210072B92B /* GreebleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		891CAEC41AE852210072B92B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 891CAEAC1AE852210072B92B /* Greeble */;
+			targetProxy = 891CAEC31AE852210072B92B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		891CAEB61AE852210072B92B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				891CAEB71AE852210072B92B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		891CAEBB1AE852210072B92B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				891CAEBC1AE852210072B92B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		891CAECA1AE852210072B92B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		891CAECB1AE852210072B92B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		891CAECD1AE852210072B92B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Greeble/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		891CAECE1AE852210072B92B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Greeble/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		891CAED01AE852210072B92B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GreebleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Greeble.app/Greeble";
+			};
+			name = Debug;
+		};
+		891CAED11AE852210072B92B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GreebleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Greeble.app/Greeble";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		891CAEA81AE852210072B92B /* Build configuration list for PBXProject "Greeble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				891CAECA1AE852210072B92B /* Debug */,
+				891CAECB1AE852210072B92B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		891CAECC1AE852210072B92B /* Build configuration list for PBXNativeTarget "Greeble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				891CAECD1AE852210072B92B /* Debug */,
+				891CAECE1AE852210072B92B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		891CAECF1AE852210072B92B /* Build configuration list for PBXNativeTarget "GreebleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				891CAED01AE852210072B92B /* Debug */,
+				891CAED11AE852210072B92B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 891CAEA51AE852210072B92B /* Project object */;
+}
