@@ -825,6 +825,127 @@
             </objects>
             <point key="canvasLocation" x="-525.75" y="470.5"/>
         </scene>
+        <!--Money View Controller-->
+        <scene sceneID="g9j-XZ-bfy">
+            <objects>
+                <viewController id="Owu-ag-U2k" customClass="MoneyViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hnQ-jf-wdw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wek-xp-792"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QfN-5I-sPZ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9k-Sg-6Na">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Money" id="U0D-xy-bf0">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hpr-iy-9Yf">
+                                            <connections>
+                                                <segue destination="fjh-Af-eF8" kind="show" id="vgQ-jd-JtK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Balance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcr-pI-3oj">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="79" y="385" width="139" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x24-pg-QFp">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="226" y="385" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Money" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isA-Qm-f6Z">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="124" y="444" width="94" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-OL-nEg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="79" y="496" width="60" height="30"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVp-IL-sXN">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="171" y="496" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwL-OY-Flu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="144" y="562" width="55" height="30"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar .png" translatesAutoresizingMaskIntoConstraints="NO" id="jbf-xv-ldN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="110" width="286" height="241"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="k9k-Sg-6Na"/>
+                                <exclude reference="qcr-pI-3oj"/>
+                                <exclude reference="x24-pg-QFp"/>
+                                <exclude reference="isA-Qm-f6Z"/>
+                                <exclude reference="kJW-OL-nEg"/>
+                                <exclude reference="UVp-IL-sXN"/>
+                                <exclude reference="bwL-OY-Flu"/>
+                                <exclude reference="jbf-xv-ldN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="k9k-Sg-6Na"/>
+                                <include reference="qcr-pI-3oj"/>
+                                <include reference="x24-pg-QFp"/>
+                                <include reference="isA-Qm-f6Z"/>
+                                <include reference="kJW-OL-nEg"/>
+                                <include reference="UVp-IL-sXN"/>
+                                <include reference="bwL-OY-Flu"/>
+                                <include reference="jbf-xv-ldN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="amountText" destination="UVp-IL-sXN" id="W72-Wh-nPR"/>
+                        <outlet property="confirmButton" destination="bwL-OY-Flu" id="JmO-ef-o1a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nwh-EK-o7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194.25" y="-362.5"/>
+        </scene>
         <!--Parent View Controller-->
         <scene sceneID="vro-3E-oSu">
             <objects>
@@ -842,7 +963,11 @@
                                 <items>
                                     <navigationItem id="7eD-mf-Uaz">
                                         <nil key="title"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="jUF-KY-6u2"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="jUF-KY-6u2">
+                                            <connections>
+                                                <segue destination="Owu-ag-U2k" kind="show" id="Nsp-3D-ira"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="0w3-Rs-6sO">
                                             <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1030,6 +1155,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dollar .png" width="512" height="512"/>
         <image name="login_background" width="917" height="1000"/>
         <image name="logo" width="252" height="269"/>
     </resources>

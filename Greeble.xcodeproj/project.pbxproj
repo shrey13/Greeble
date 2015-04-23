@@ -30,6 +30,7 @@
 		AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */; };
 		ADAF17591AE9893500485DC3 /* addTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF17581AE9893500485DC3 /* addTasksViewController.swift */; };
 		ADAF175B1AE990BF00485DC3 /* dollar .png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF175A1AE990BF00485DC3 /* dollar .png */; };
+		ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		ADAF17581AE9893500485DC3 /* addTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTasksViewController.swift; sourceTree = "<group>"; };
 		ADAF175A1AE990BF00485DC3 /* dollar .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar .png"; sourceTree = "<group>"; };
+		ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				891CAEBB1AE852210072B92B /* LaunchScreen.xib */,
 				891CAEB01AE852210072B92B /* Supporting Files */,
 				891CAEF31AE8CAC20072B92B /* SignUp.swift */,
+				ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */,
 			);
 			path = Greeble;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				891CAEB51AE852210072B92B /* ViewController.swift in Sources */,
 				891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */,
 				ADAF17591AE9893500485DC3 /* addTasksViewController.swift in Sources */,
+				ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */,
 				AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */,
 				891CAEB31AE852210072B92B /* AppDelegate.swift in Sources */,
 			);
