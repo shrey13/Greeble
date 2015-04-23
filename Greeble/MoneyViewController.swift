@@ -12,6 +12,15 @@ class MoneyViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var amountText: UITextField!
     
+    @IBOutlet var balanceLabel: UILabel!
+    @IBAction func confirmButton(sender: UIButton) {
+        
+        var amountToBeAdded = (amountText.text as NSString).doubleValue
+        var currentBalance = (balanceLabel.text! as NSString).doubleValue
+        balanceLabel.text = String(format:"%.1f", (currentBalance + amountToBeAdded))
+        amountText.text = "";
+    }
+    
     @IBOutlet var confirmButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()

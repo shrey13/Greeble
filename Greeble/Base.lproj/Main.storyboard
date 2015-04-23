@@ -866,13 +866,13 @@
                                     <rect key="frame" x="79" y="385" width="139" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x24-pg-QFp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x24-pg-QFp">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="226" y="385" width="42" height="21"/>
+                                    <rect key="frame" x="226" y="385" width="49" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Money" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isA-Qm-f6Z">
@@ -900,6 +900,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="144" y="539" width="55" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="confirmButton:" destination="Owu-ag-U2k" eventType="touchUpInside" id="ybe-WV-qas"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Amount    $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-OL-nEg">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -939,6 +942,7 @@
                     </view>
                     <connections>
                         <outlet property="amountText" destination="UVp-IL-sXN" id="W72-Wh-nPR"/>
+                        <outlet property="balanceLabel" destination="x24-pg-QFp" id="Rt7-6v-VBD"/>
                         <outlet property="confirmButton" destination="bwL-OY-Flu" id="JmO-ef-o1a"/>
                     </connections>
                 </viewController>
