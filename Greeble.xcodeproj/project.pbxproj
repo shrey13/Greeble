@@ -13,6 +13,16 @@
 		891CAEBA1AE852210072B92B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CAEB91AE852210072B92B /* Images.xcassets */; };
 		891CAEBD1AE852210072B92B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891CAEBB1AE852210072B92B /* LaunchScreen.xib */; };
 		891CAEC91AE852210072B92B /* GreebleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEC81AE852210072B92B /* GreebleTests.swift */; };
+		AD5C429B1AE87C0C00499B01 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C429A1AE87C0C00499B01 /* CFNetwork.framework */; };
+		AD5C429D1AE87C1800499B01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C429C1AE87C1800499B01 /* CoreGraphics.framework */; };
+		AD5C429F1AE87C2200499B01 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C429E1AE87C2200499B01 /* CoreLocation.framework */; };
+		AD5C42A11AE87C2B00499B01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C42A01AE87C2B00499B01 /* QuartzCore.framework */; };
+		AD5C42A31AE87C3500499B01 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C42A21AE87C3500499B01 /* Security.framework */; };
+		AD5C42A51AE87C3F00499B01 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C42A41AE87C3F00499B01 /* SystemConfiguration.framework */; };
+		AD5C42A71AE87C4800499B01 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C42A61AE87C4800499B01 /* libsqlite3.dylib */; };
+		AD5C42A91AE87C5200499B01 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C42A81AE87C5200499B01 /* libz.dylib */; };
+		AD5C42AC1AE87CD200499B01 /* Bolts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD5C42AB1AE87CD200499B01 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD5C42AE1AE87D1900499B01 /* ParseOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD5C42AD1AE87D1900499B01 /* ParseOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AD5C42AA1AE87C6900499B01 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AD5C42AE1AE87D1900499B01 /* ParseOSX.framework in CopyFiles */,
+				AD5C42AC1AE87CD200499B01 /* Bolts.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		891CAEAD1AE852210072B92B /* Greeble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greeble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		891CAEB11AE852210072B92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +60,16 @@
 		891CAEC21AE852210072B92B /* GreebleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreebleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		891CAEC71AE852210072B92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		891CAEC81AE852210072B92B /* GreebleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreebleTests.swift; sourceTree = "<group>"; };
+		AD5C429A1AE87C0C00499B01 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AD5C429C1AE87C1800499B01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AD5C429E1AE87C2200499B01 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AD5C42A01AE87C2B00499B01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AD5C42A21AE87C3500499B01 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AD5C42A41AE87C3F00499B01 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AD5C42A61AE87C4800499B01 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AD5C42A81AE87C5200499B01 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AD5C42AB1AE87CD200499B01 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		AD5C42AD1AE87D1900499B01 /* ParseOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseOSX.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +77,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5C42A91AE87C5200499B01 /* libz.dylib in Frameworks */,
+				AD5C42A71AE87C4800499B01 /* libsqlite3.dylib in Frameworks */,
+				AD5C42A51AE87C3F00499B01 /* SystemConfiguration.framework in Frameworks */,
+				AD5C42A31AE87C3500499B01 /* Security.framework in Frameworks */,
+				AD5C42A11AE87C2B00499B01 /* QuartzCore.framework in Frameworks */,
+				AD5C429F1AE87C2200499B01 /* CoreLocation.framework in Frameworks */,
+				AD5C429D1AE87C1800499B01 /* CoreGraphics.framework in Frameworks */,
+				AD5C429B1AE87C0C00499B01 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +101,16 @@
 		891CAEA41AE852210072B92B = {
 			isa = PBXGroup;
 			children = (
+				AD5C42AD1AE87D1900499B01 /* ParseOSX.framework */,
+				AD5C42AB1AE87CD200499B01 /* Bolts.framework */,
+				AD5C42A81AE87C5200499B01 /* libz.dylib */,
+				AD5C42A61AE87C4800499B01 /* libsqlite3.dylib */,
+				AD5C42A41AE87C3F00499B01 /* SystemConfiguration.framework */,
+				AD5C42A21AE87C3500499B01 /* Security.framework */,
+				AD5C42A01AE87C2B00499B01 /* QuartzCore.framework */,
+				AD5C429E1AE87C2200499B01 /* CoreLocation.framework */,
+				AD5C429C1AE87C1800499B01 /* CoreGraphics.framework */,
+				AD5C429A1AE87C0C00499B01 /* CFNetwork.framework */,
 				891CAEAF1AE852210072B92B /* Greeble */,
 				891CAEC51AE852210072B92B /* GreebleTests */,
 				891CAEAE1AE852210072B92B /* Products */,
@@ -122,6 +174,7 @@
 				891CAEA91AE852210072B92B /* Sources */,
 				891CAEAA1AE852210072B92B /* Frameworks */,
 				891CAEAB1AE852210072B92B /* Resources */,
+				AD5C42AA1AE87C6900499B01 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -409,6 +462,7 @@
 				891CAECE1AE852210072B92B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		891CAECF1AE852210072B92B /* Build configuration list for PBXNativeTarget "GreebleTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +471,7 @@
 				891CAED11AE852210072B92B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
