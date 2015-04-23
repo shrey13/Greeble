@@ -18,9 +18,27 @@ class MoneyViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         
-        confirmButton.enabled = false
         amountText.delegate = self
-        amountText.keyboardType = .NumberPad;
+        amountText.keyboardType = .DecimalPad;
+        
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+    
+    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 150
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 150
+    }
+    
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,21 +46,6 @@ class MoneyViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        // Find out what the text field will be after adding the current edit
-        let text = (amountText.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
-        
-        if let intVal = text.toInt() {
-            // Text field converted to an Int
-            confirmButton.enabled = true
-        } else {
-            // Text field is not an Int
-            confirmButton.enabled = false
-        }
-        
-        // Return true so the text field will be changed
-        return true
-    }
     
 
     /*
