@@ -101,13 +101,6 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tasksTable: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("You selected cell #\(indexPath.row)!")
-        
-        let cell: UITableViewCell = tasksTable.cellForRowAtIndexPath(indexPath)!
-        if cell.accessoryType == UITableViewCellAccessoryType.None {
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryType.None
-        }
         tasksTable.deselectRowAtIndexPath(indexPath, animated: true)
         
     }

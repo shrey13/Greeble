@@ -14,6 +14,7 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var tasksTable: UITableView!
     
     var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+    var selectedTasks:[String] = []
     var searchActive : Bool = false
     var filtered:[String] = []
     
@@ -87,11 +88,15 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tasksTable: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell: UITableViewCell = tasksTable.cellForRowAtIndexPath(indexPath)!
+        
         if cell.accessoryType == UITableViewCellAccessoryType.None {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            selectedTasks.append(cell.textLabel!.text!)
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.None
+            selectedTasks.removeAtIndex(find(selectedTasks, cell.textLabel!.text!)!)
         }
+        println(selectedTasks)
         tasksTable.deselectRowAtIndexPath(indexPath, animated: true)
         
     }

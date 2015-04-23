@@ -29,6 +29,7 @@
 		891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEF31AE8CAC20072B92B /* SignUp.swift */; };
 		AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */; };
 		ADAF17591AE9893500485DC3 /* addTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF17581AE9893500485DC3 /* addTasksViewController.swift */; };
+		ADAF175B1AE990BF00485DC3 /* dollar .png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF175A1AE990BF00485DC3 /* dollar .png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		891CAEF31AE8CAC20072B92B /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		ADAF17581AE9893500485DC3 /* addTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTasksViewController.swift; sourceTree = "<group>"; };
+		ADAF175A1AE990BF00485DC3 /* dollar .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar .png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				891CAEB41AE852210072B92B /* ViewController.swift */,
 				891CAEB61AE852210072B92B /* Main.storyboard */,
 				891CAEB91AE852210072B92B /* Images.xcassets */,
+				ADAF175A1AE990BF00485DC3 /* dollar .png */,
 				891CAEBB1AE852210072B92B /* LaunchScreen.xib */,
 				891CAEB01AE852210072B92B /* Supporting Files */,
 				891CAEF31AE8CAC20072B92B /* SignUp.swift */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADAF175B1AE990BF00485DC3 /* dollar .png in Resources */,
 				891CAEB81AE852210072B92B /* Main.storyboard in Resources */,
 				891CAEBD1AE852210072B92B /* LaunchScreen.xib in Resources */,
 				891CAEBA1AE852210072B92B /* Images.xcassets in Resources */,
