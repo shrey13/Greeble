@@ -1,5 +1,5 @@
 //
-//  PARENTViewController.swift
+//  addTasksViewController.swift
 //  Greeble
 //
 //  Created by Sudhanshu Nath Mishra on 4/23/15.
@@ -8,32 +8,19 @@
 
 import UIKit
 
-class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,
-    UISearchBarDelegate{
-    
-    var pending = true
-    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+class addTasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tasksTable: UITableView!
     
-    @IBAction func tableType(sender: AnyObject) {
-        if pending {
-            pending = false
-            data = ["MIT"]
-            tasksTable.reloadData()
-        } else {
-            pending = true
-            data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
-            tasksTable.reloadData()
-        }
-    }
+    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
     var searchActive : Bool = false
-    
     var filtered:[String] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tasksTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         tasksTable.delegate = self
@@ -42,8 +29,7 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         // Do any additional setup after loading the view.
     }
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -100,8 +86,6 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tasksTable: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
-        
         let cell: UITableViewCell = tasksTable.cellForRowAtIndexPath(indexPath)!
         if cell.accessoryType == UITableViewCellAccessoryType.None {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
@@ -111,10 +95,8 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tasksTable.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
+
     
-    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
-        
-    }
 
     /*
     // MARK: - Navigation

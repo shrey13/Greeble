@@ -28,6 +28,7 @@
 		891CAEED1AE88B000072B92B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 891CAEEC1AE88B000072B92B /* libsqlite3.dylib */; };
 		891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEF31AE8CAC20072B92B /* SignUp.swift */; };
 		AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */; };
+		ADAF17591AE9893500485DC3 /* addTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF17581AE9893500485DC3 /* addTasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		891CAEEE1AE88B490072B92B /* Greeble-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Greeble-Bridging-Header.h"; sourceTree = "<group>"; };
 		891CAEF31AE8CAC20072B92B /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		ADAF17581AE9893500485DC3 /* addTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */,
+				ADAF17581AE9893500485DC3 /* addTasksViewController.swift */,
 				891CAED61AE88A840072B92B /* Parse.framework */,
 				891CAED41AE88A7B0072B92B /* Bolts.framework */,
 				891CAEB21AE852210072B92B /* AppDelegate.swift */,
@@ -274,6 +277,7 @@
 			files = (
 				891CAEB51AE852210072B92B /* ViewController.swift in Sources */,
 				891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */,
+				ADAF17591AE9893500485DC3 /* addTasksViewController.swift in Sources */,
 				AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */,
 				891CAEB31AE852210072B92B /* AppDelegate.swift in Sources */,
 			);
