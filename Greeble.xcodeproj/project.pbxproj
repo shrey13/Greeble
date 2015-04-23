@@ -26,6 +26,7 @@
 		891CAEE91AE88AED0072B92B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891CAEE81AE88AED0072B92B /* SystemConfiguration.framework */; };
 		891CAEEB1AE88AF70072B92B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 891CAEEA1AE88AF70072B92B /* libz.dylib */; };
 		891CAEED1AE88B000072B92B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 891CAEEC1AE88B000072B92B /* libsqlite3.dylib */; };
+		891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEF31AE8CAC20072B92B /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		891CAEEA1AE88AF70072B92B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		891CAEEC1AE88B000072B92B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		891CAEEE1AE88B490072B92B /* Greeble-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Greeble-Bridging-Header.h"; sourceTree = "<group>"; };
+		891CAEF31AE8CAC20072B92B /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				891CAEB91AE852210072B92B /* Images.xcassets */,
 				891CAEBB1AE852210072B92B /* LaunchScreen.xib */,
 				891CAEB01AE852210072B92B /* Supporting Files */,
+				891CAEF31AE8CAC20072B92B /* SignUp.swift */,
 			);
 			path = Greeble;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				891CAEB51AE852210072B92B /* ViewController.swift in Sources */,
+				891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */,
 				891CAEB31AE852210072B92B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +480,7 @@
 				891CAECE1AE852210072B92B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		891CAECF1AE852210072B92B /* Build configuration list for PBXNativeTarget "GreebleTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +489,7 @@
 				891CAED11AE852210072B92B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

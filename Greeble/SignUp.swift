@@ -1,15 +1,19 @@
 //
-//  ViewController.swift
+//  SignUp.swift
 //  Greeble
 //
-//  Created by Shreyash Agrawal on 4/22/15.
+//  Created by Shreyash Agrawal on 4/23/15.
 //  Copyright (c) 2015 Greeblers. All rights reserved.
 //
 
+
 import UIKit
 import Parse
-class ViewController: UIViewController {
 
+class SignUp: UIViewController {
+    
+    var parent = true
+    
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     func displayErrorAlert(title: String, error: String) {
@@ -23,6 +27,15 @@ class ViewController: UIViewController {
     
     @IBOutlet var username: UITextField!
     @IBOutlet var password: UITextField!
+    
+    @IBAction func parentOrChild(sender: AnyObject) {
+        if parent {
+            parent = false
+        } else {
+            parent = true
+        }
+    }
+    
     
     @IBAction func signUp(sender: AnyObject) {
         var errorMessage = ""
@@ -45,62 +58,63 @@ class ViewController: UIViewController {
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
-            PFUser.logInWithUsernameInBackground(username.text, password:password.text) {
-                (user: PFUser?, logInError: NSError?) -> Void in
+            var user = PFUser()
+            user.username = username.text
+            user.password = password.text
+            user["parent"] = parent
+            
+            user.signUpInBackgroundWithBlock {
+                (succeeded: Bool, error: NSError?) -> Void in
                 
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
-                if logInError == nil {
-                    // Do stuff after successful login.
-                    println("Logged In")
+                if error == nil {
+                    // Hooray! Let them use the app now.
+                    println("Signed Up")
                 } else {
-                    // The login failed. Check error to see why.
-                    if let errorString = logInError!.userInfo?["error"] as? NSString {
+                    if let errorString = error!.userInfo?["error"] as? NSString {
                         errorMessage = errorString as String
                     } else {
                         errorMessage = "Please try again later."
                     }
                     // Show the errorString somewhere and let the user try again.
-                    self.displayErrorAlert("Error Logging In", error: errorMessage.capitalizedString)
+                    self.displayErrorAlert("Error Signing Up", error: errorMessage.capitalizedString)
                 }
             }
-            
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-//        let testObject = PFObject(className: "TestObject")
-//        testObject["foo"] = "bar"
-//        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-//            println("Object has been saved.")
-//        }
-        
-//        var query = PFQuery(className: "TestObject")
-//        query.getObjectInBackgroundWithId("CBPVVXDJud") {
-//            (success: PFObject?, error: NSError?) -> Void in
-//            if error == nil {
-//                let s = success!
-//                println(s["foo"])
-//                s["foo"] = "bars"
-//                s.saveInBackground()
-//            } else{
-//                println("Object has been saved.")
-//            }
-//        }
-        
-        
         
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        println("SignUp")
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //        let testObject = PFObject(className: "TestObject")
+        //        testObject["foo"] = "bar"
+        //        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        //            println("Object has been saved.")
+        //        }
+        
+        //        var query = PFQuery(className: "TestObject")
+        //        query.getObjectInBackgroundWithId("CBPVVXDJud") {
+        //            (success: PFObject?, error: NSError?) -> Void in
+        //            if error == nil {
+        //                let s = success!
+        //                println(s["foo"])
+        //                s["foo"] = "bars"
+        //                s.saveInBackground()
+        //            } else{
+        //                println("Object has been saved.")
+        //            }
+        //        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
