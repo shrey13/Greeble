@@ -15,6 +15,8 @@ class ProbablityViewController: UIViewController {
     
     @IBOutlet var solutionText: UITextView!
     
+    var moneyAvailable = 0.0
+    
     @IBAction func dontSwitchClick(sender: UIButton) {
         if (switchButton.titleColorForState(UIControlState.Normal) != UIColor.greenColor()){
             switchButton.setTitleColor(UIColor.greenColor(), forState:UIControlState.Normal)
@@ -33,9 +35,9 @@ class ProbablityViewController: UIViewController {
                     // Do something with the found objects
                     if let objects = objects as? [PFObject] {
                         for object in objects {
-                            
+                            var pendingTasks = [String]()
                             if let tasksPending = object.objectForKey("pendingTasks") as? [String] {
-                                var pendingTasks = tasksPending
+                                pendingTasks = tasksPending
                                 pendingTasks.removeAtIndex(find(pendingTasks, "Math")!)
                                 object["pendingTasks"] = pendingTasks
                             }
@@ -44,6 +46,17 @@ class ProbablityViewController: UIViewController {
 //                                moneyBalance = balance
 //                                self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
 //                            }
+                            if let balance = object.objectForKey("moneyAvailable") as? Double {
+                                if pendingTasks.count > 0 {
+                                    if let earned = object.objectForKey("moneyEarned") as? Double {
+                                        object["moneyEarned"] = earned + balance/Double(pendingTasks.count+1)
+                                        object["moneyAvailable"] = balance - earned
+                                    } else {
+                                        object["moneyEarned"] = balance/Double(pendingTasks.count)
+                                        object["moneyAvailable"] = balance - balance/Double(pendingTasks.count+1)
+                                    }
+                                }
+                            }
     
                             if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
                                 var completedTasks = tasksCompleted
@@ -87,17 +100,24 @@ class ProbablityViewController: UIViewController {
                     // Do something with the found objects
                     if let objects = objects as? [PFObject] {
                         for object in objects {
-                            
+                            var pendingTasks = [String]()
                             if let tasksPending = object.objectForKey("pendingTasks") as? [String] {
-                                var pendingTasks = tasksPending
+                                pendingTasks = tasksPending
                                 pendingTasks.removeAtIndex(find(pendingTasks, "Math")!)
                                 object["pendingTasks"] = pendingTasks
                             }
                             
-                            //                            if let balance = object.objectForKey("moneyAvailable") as? Double {
-                            //                                moneyBalance = balance
-                            //                                self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
-                            //                            }
+                            if let balance = object.objectForKey("moneyAvailable") as? Double {
+                                if pendingTasks.count > 0 {
+                                    if let earned = object.objectForKey("moneyEarned") as? Double {
+                                        object["moneyEarned"] = earned + balance/Double(pendingTasks.count+1)
+                                        object["moneyAvailable"] = balance - earned
+                                    } else {
+                                        object["moneyEarned"] = balance/Double(pendingTasks.count)
+                                        object["moneyAvailable"] = balance - balance/Double(pendingTasks.count+1)
+                                    }
+                                }
+                            }
                             
                             if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
                                 var completedTasks = tasksCompleted
