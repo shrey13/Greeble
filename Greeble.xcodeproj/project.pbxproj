@@ -31,6 +31,10 @@
 		AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */; };
 		ADAF175B1AE990BF00485DC3 /* dollar .png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF175A1AE990BF00485DC3 /* dollar .png */; };
 		ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */; };
+		ADAF175F1AEA0BA300485DC3 /* ProbablityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF175E1AEA0BA300485DC3 /* ProbablityViewController.swift */; };
+		ADAF17611AEA0D4D00485DC3 /* mhall.png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF17601AEA0D4D00485DC3 /* mhall.png */; };
+		ADAF17631AEA1B8200485DC3 /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF17621AEA1B8200485DC3 /* chicken.png */; };
+		ADAF17651AEA1C8200485DC3 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF17641AEA1C8200485DC3 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		ADAF175A1AE990BF00485DC3 /* dollar .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar .png"; sourceTree = "<group>"; };
 		ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		ADAF175E1AEA0BA300485DC3 /* ProbablityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProbablityViewController.swift; sourceTree = "<group>"; };
+		ADAF17601AEA0D4D00485DC3 /* mhall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mhall.png; sourceTree = "<group>"; };
+		ADAF17621AEA1B8200485DC3 /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
+		ADAF17641AEA1C8200485DC3 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,8 @@
 		891CAEAF1AE852210072B92B /* Greeble */ = {
 			isa = PBXGroup;
 			children = (
+				ADAF17621AEA1B8200485DC3 /* chicken.png */,
+				ADAF17601AEA0D4D00485DC3 /* mhall.png */,
 				89C90F7E1AE9EF49003D3F4D /* addTasksViewController.swift */,
 				AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */,
 				891CAED61AE88A840072B92B /* Parse.framework */,
@@ -152,6 +162,8 @@
 				891CAEB01AE852210072B92B /* Supporting Files */,
 				891CAEF31AE8CAC20072B92B /* SignUp.swift */,
 				ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */,
+				ADAF175E1AEA0BA300485DC3 /* ProbablityViewController.swift */,
+				ADAF17641AEA1C8200485DC3 /* HistoryViewController.swift */,
 			);
 			path = Greeble;
 			sourceTree = "<group>";
@@ -262,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADAF175B1AE990BF00485DC3 /* dollar .png in Resources */,
+				ADAF17631AEA1B8200485DC3 /* chicken.png in Resources */,
 				891CAEB81AE852210072B92B /* Main.storyboard in Resources */,
+				ADAF17611AEA0D4D00485DC3 /* mhall.png in Resources */,
 				891CAEBD1AE852210072B92B /* LaunchScreen.xib in Resources */,
 				891CAEBA1AE852210072B92B /* Images.xcassets in Resources */,
 			);
@@ -285,9 +299,11 @@
 				891CAEB51AE852210072B92B /* ViewController.swift in Sources */,
 				89C90F7F1AE9EF49003D3F4D /* addTasksViewController.swift in Sources */,
 				891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */,
+				ADAF175F1AEA0BA300485DC3 /* ProbablityViewController.swift in Sources */,
 				ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */,
 				AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */,
 				891CAEB31AE852210072B92B /* AppDelegate.swift in Sources */,
+				ADAF17651AEA1C8200485DC3 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

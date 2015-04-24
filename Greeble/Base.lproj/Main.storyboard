@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -952,6 +952,209 @@
             </objects>
             <point key="canvasLocation" x="1085.25" y="-358.5"/>
         </scene>
+        <!--Probablity View Controller-->
+        <scene sceneID="pv7-4q-tPr">
+            <objects>
+                <viewController id="0X4-TI-eLT" customClass="ProbablityViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iyx-FL-arW"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXp-E9-zGr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z1y-z2-0tG">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-Fo-9cj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Greeble" id="l5Q-SF-YVr">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="QKw-KV-eJC"/>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwC-7k-Cqe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You are in a game show and are given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say Door No.1 and the host, who knows what's behind the doors, opens another door, say Door No.3 which has a goat. He then asks you, "Do you want to pick Door No. 2?" Is it to your advantage to switch your choice?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <rect key="frame" x="13" y="78" width="348" height="207"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAK-6m-4vc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Switch">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="142" y="505" width="91" height="43"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchClick:" destination="0X4-TI-eLT" eventType="touchUpInside" id="Izp-Ur-s3J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-bK-62U">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Don't Switch">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="92" y="550" width="191" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="dontSwitchClick:" destination="0X4-TI-eLT" eventType="touchUpInside" id="kRy-xu-Un5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mhall.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmt-sm-YL1">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="69" y="279" width="222" height="198"/>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The probablity of winning if you switch is 2/3 and if you don't is 1/3. " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HJE-3e-LcR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="505" width="240" height="89"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="m5h-Fo-9cj"/>
+                                <exclude reference="VwC-7k-Cqe"/>
+                                <exclude reference="YAK-6m-4vc"/>
+                                <exclude reference="eXz-bK-62U"/>
+                                <exclude reference="dmt-sm-YL1"/>
+                                <exclude reference="HJE-3e-LcR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="m5h-Fo-9cj"/>
+                                <include reference="VwC-7k-Cqe"/>
+                                <include reference="YAK-6m-4vc"/>
+                                <include reference="eXz-bK-62U"/>
+                                <include reference="dmt-sm-YL1"/>
+                                <include reference="HJE-3e-LcR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dontSwitchButton" destination="eXz-bK-62U" id="Z5K-BL-IR9"/>
+                        <outlet property="solutionText" destination="HJE-3e-LcR" id="mZf-ji-Ght"/>
+                        <outlet property="switchButton" destination="YAK-6m-4vc" id="c9s-f6-NxG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKS-jD-nN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676.25" y="-392.5"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="iMG-UL-Thv">
+            <objects>
+                <viewController id="WjE-VL-p1q" customClass="HistoryViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgl-6r-bXT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Avf-cJ-hRn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rVo-Uq-wnm">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeJ-Sd-jqS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Greeble" id="VCx-Lo-FiO">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="RuE-NK-e4U"/>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken.png" translatesAutoresizingMaskIntoConstraints="NO" id="ub7-wK-Xpf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="4" y="148" width="350" height="218"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h51-Pj-yqg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Chicken">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="458" width="130" height="60"/>
+                                </variation>
+                                <connections>
+                                    <action selector="chickenClicked:" destination="WjE-VL-p1q" eventType="touchUpInside" id="A9l-8x-pCA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyo-Yb-hI1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Egg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="526" width="108" height="48"/>
+                                </variation>
+                                <connections>
+                                    <action selector="eggClick:" destination="WjE-VL-p1q" eventType="touchUpInside" id="2rZ-Yo-K3e"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="There's no way you're getting any money for this question. " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XvC-CH-n0h">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="435" width="301" height="155"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BeJ-Sd-jqS"/>
+                                <exclude reference="ub7-wK-Xpf"/>
+                                <exclude reference="h51-Pj-yqg"/>
+                                <exclude reference="Gyo-Yb-hI1"/>
+                                <exclude reference="XvC-CH-n0h"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="BeJ-Sd-jqS"/>
+                                <include reference="ub7-wK-Xpf"/>
+                                <include reference="h51-Pj-yqg"/>
+                                <include reference="Gyo-Yb-hI1"/>
+                                <include reference="XvC-CH-n0h"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="chickenButton" destination="h51-Pj-yqg" id="oEQ-y9-mGo"/>
+                        <outlet property="eggButton" destination="Gyo-Yb-hI1" id="fF4-zh-Ea2"/>
+                        <outlet property="solutionText" destination="XvC-CH-n0h" id="Uvl-hv-bSn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZk-tB-qGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2273.25" y="-392.5"/>
+        </scene>
         <!--Parent View Controller-->
         <scene sceneID="vro-3E-oSu">
             <objects>
@@ -1072,6 +1275,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kpS-19-Fa7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7KG-SM-mLK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1183,11 +1387,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chicken.png" width="740" height="395"/>
         <image name="dollar .png" width="512" height="512"/>
         <image name="login_background" width="917" height="1000"/>
         <image name="logo" width="252" height="269"/>
+        <image name="mhall.png" width="300" height="375"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vgQ-jd-JtK"/>
+        <segue reference="phf-XR-b2E"/>
     </inferredMetricsTieBreakers>
 </document>
