@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -488,8 +488,7 @@
                                         <exclude reference="mlv-Bg-Usf"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="75" y="132" width="224" height="57"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Tcx-jP-XXU"/>
                                         <include reference="mlv-Bg-Usf"/>
@@ -1067,13 +1066,28 @@
                                     <rect key="frame" x="69" y="279" width="222" height="198"/>
                                 </variation>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-61-ggQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Greeble" id="zcu-Rv-DwB">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="UHm-6R-b4o">
+                                            <connections>
+                                                <segue destination="LIV-b4-WfQ" kind="show" id="gQ3-Tq-3gh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                </variation>
+                            </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The probablity of winning if you switch is 2/3 and if you don't is 1/3. " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HJE-3e-LcR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="67" y="505" width="240" height="89"/>
+                                    <rect key="frame" x="81" y="497" width="240" height="89"/>
                                 </variation>
                             </textView>
                         </subviews>
@@ -1084,6 +1098,7 @@
                                 <exclude reference="YAK-6m-4vc"/>
                                 <exclude reference="eXz-bK-62U"/>
                                 <exclude reference="dmt-sm-YL1"/>
+                                <exclude reference="eCZ-61-ggQ"/>
                                 <exclude reference="HJE-3e-LcR"/>
                             </mask>
                         </variation>
@@ -1093,6 +1108,7 @@
                                 <include reference="YAK-6m-4vc"/>
                                 <include reference="eXz-bK-62U"/>
                                 <include reference="dmt-sm-YL1"/>
+                                <include reference="eCZ-61-ggQ"/>
                                 <include reference="HJE-3e-LcR"/>
                             </mask>
                         </variation>
@@ -1161,13 +1177,28 @@
                                     <action selector="eggClick:" destination="WjE-VL-p1q" eventType="touchUpInside" id="2rZ-Yo-K3e"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDt-HN-cgX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Greeble" id="Zke-Es-6Kx">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="yww-6O-SbX">
+                                            <connections>
+                                                <segue destination="LIV-b4-WfQ" kind="show" id="38c-CS-nU5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                </variation>
+                            </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="There's no way you're getting any money for this question. " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XvC-CH-n0h">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="37" y="435" width="301" height="155"/>
+                                    <rect key="frame" x="29" y="442" width="301" height="155"/>
                                 </variation>
                             </textView>
                         </subviews>
@@ -1177,6 +1208,7 @@
                                 <exclude reference="ub7-wK-Xpf"/>
                                 <exclude reference="h51-Pj-yqg"/>
                                 <exclude reference="Gyo-Yb-hI1"/>
+                                <exclude reference="yDt-HN-cgX"/>
                                 <exclude reference="XvC-CH-n0h"/>
                             </mask>
                         </variation>
@@ -1185,6 +1217,7 @@
                                 <include reference="ub7-wK-Xpf"/>
                                 <include reference="h51-Pj-yqg"/>
                                 <include reference="Gyo-Yb-hI1"/>
+                                <include reference="yDt-HN-cgX"/>
                                 <include reference="XvC-CH-n0h"/>
                             </mask>
                         </variation>
@@ -1401,7 +1434,9 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="hdo-gC-gUl">
                         <nil key="title"/>
-                        <barButtonItem key="backBarButtonItem" title="Back" id="AgL-R8-WhF"/>
+                        <barButtonItem key="leftBarButtonItem" title="$" id="xjo-ib-RpH">
+                            <color key="tintColor" red="0.80430763959999996" green="0.26698407530000001" blue="0.26201966399999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="GLA-9z-xjC">
                             <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1559,7 +1594,8 @@
         <image name="us-dollar-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vgQ-jd-JtK"/>
+        <segue reference="phf-XR-b2E"/>
+        <segue reference="Vcc-xQ-rqp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.80430763959999996" green="0.26698407530000001" blue="0.26201966399999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
