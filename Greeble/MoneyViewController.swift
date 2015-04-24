@@ -32,6 +32,7 @@ class MoneyViewController: UIViewController, UITextFieldDelegate {
                     var newTask = PFObject(className:"Tasks")
                     newTask["moneyAvailable"] = moneyBalance
                     newTask["parent"] = userID
+                    newTask["children"] = "shrey"
                     newTask.saveInBackgroundWithBlock {
                         (success: Bool, error: NSError?) -> Void in
                         if (success) {

@@ -23,6 +23,45 @@ class ChildCollectionViewController: UICollectionViewController, UICollectionVie
         }
     }
     
+    @IBAction func refreshButton(sender: AnyObject) {
+        var currentUser = PFUser.currentUser()
+        var userID:String = currentUser!.objectForKey("username") as! String
+        var queryTasks = PFQuery(className: "Tasks")
+        queryTasks.whereKey("children", equalTo:userID)
+        queryTasks.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        
+                        if let tasksPending = object.objectForKey("pendingTasks") as? [String] {
+                            self.pendingTasks = tasksPending
+                        }
+                        
+                        if let balance = object.objectForKey("moneyEarned") as? Double {
+                            self.moneyEarned = balance
+                        }
+                        
+                        if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
+                            self.completedTasks = tasksCompleted
+                        }
+                        //                        self.data = self.pendingTasks
+                        //                        self.tasksTable.reloadData()
+                        self.moneyEarnedLabel.title = "$" + String(format:"%.2f", self.moneyEarned)
+                        self.data = self.pendingTasks
+                        self.collectionView?.reloadData()
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error!.userInfo!)")
+            }
+        }
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +109,46 @@ class ChildCollectionViewController: UICollectionViewController, UICollectionVie
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        var currentUser = PFUser.currentUser()
+        var userID:String = currentUser!.objectForKey("username") as! String
+        var queryTasks = PFQuery(className: "Tasks")
+        queryTasks.whereKey("children", equalTo:userID)
+        queryTasks.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        
+                        if let tasksPending = object.objectForKey("pendingTasks") as? [String] {
+                            self.pendingTasks = tasksPending
+                        }
+                        
+                        if let balance = object.objectForKey("moneyEarned") as? Double {
+                            self.moneyEarned = balance
+                        }
+                        
+                        if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
+                            self.completedTasks = tasksCompleted
+                        }
+                        //                        self.data = self.pendingTasks
+                        //                        self.tasksTable.reloadData()
+                        self.moneyEarnedLabel.title = "$" + String(format:"%.2f", self.moneyEarned)
+                        self.data = self.pendingTasks
+                        self.collectionView?.reloadData()
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error!.userInfo!)")
+            }
+        }
+    }
+    
     // MARK: UICollectionViewDataSource
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -105,7 +184,7 @@ class ChildCollectionViewController: UICollectionViewController, UICollectionVie
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
         sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
-            return CGSize(width: 170, height: 300)
+            return CGSize(width: 180, height: 300)
     }
     
     func collectionView(collectionView: UICollectionView!,

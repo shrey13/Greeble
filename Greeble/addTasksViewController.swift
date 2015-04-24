@@ -19,6 +19,7 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
     var searchActive : Bool = false
     var filtered:[String] = []
     
+    @IBOutlet var doneButton: UIBarButtonItem!
     
     @IBAction func done(sender: AnyObject) {
         println("Done Button")
@@ -69,7 +70,8 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        doneButton.enabled = false
+//        self.navigationItem.rightBarButtonItem?.enabled = false
         self.tasksTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         tasksTable.delegate = self
@@ -163,9 +165,13 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
         if cell.accessoryType == UITableViewCellAccessoryType.None {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
             selectedTasks.append(cell.textLabel!.text!)
+            doneButton.enabled = true
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.None
             selectedTasks.removeAtIndex(find(selectedTasks, cell.textLabel!.text!)!)
+            if selectedTasks.count == 0 {
+                doneButton.enabled = false
+            }
         }
         //println(selectedTasks)
         tasksTable.deselectRowAtIndexPath(indexPath, animated: true)
