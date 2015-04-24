@@ -58,7 +58,7 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
             (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 // The find succeeded.
-                println("Successfully retrieved \(objects!.count) scores.")
+                println("Successfully retrieved \(objects!.count) scores in parentView")
                 // Do something with the found objects
                 if let objects = objects as? [PFObject] {
                     for object in objects {
