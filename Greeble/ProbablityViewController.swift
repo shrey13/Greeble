@@ -127,7 +127,8 @@ class ProbablityViewController: UIViewController {
         super.viewDidLoad()
         
         solutionText.hidden = true;
-
+//        self.navigationController?.navigationBar.topItem?.title = "Greeble"
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Billabong", size: 34)!,  NSForegroundColorAttributeName: UIColor.redColor()]
         // Do any additional setup after loading the view.
     }
 

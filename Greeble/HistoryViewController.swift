@@ -123,12 +123,12 @@ class HistoryViewController: UIViewController {
     
     @IBOutlet var eggClick: UIButton!
     
-    @IBOutlet var navigationBar: UINavigationBar!
+//    @IBOutlet var navigationBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationBar.topItem?.title = "Greeble"
-        self.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Billabong", size: 34)!,  NSForegroundColorAttributeName: UIColor.redColor()]
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        self.navigationBar.topItem?.title = "Greeble"
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Billabong", size: 34)!,  NSForegroundColorAttributeName: UIColor.redColor()]
 
         solutionText.hidden = true;
 
