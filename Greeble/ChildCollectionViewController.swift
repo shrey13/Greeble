@@ -8,7 +8,9 @@ class ChildCollectionViewController: UICollectionViewController, UICollectionVie
     var pendingTasks = [String]()
     var completedTasks = [String]()
     var pending = true
+    var moneyEarned = 0.00
     
+    @IBOutlet var moneyEarnedLabel: UIBarButtonItem!
     @IBAction func taskType(sender: AnyObject) {
         if pending {
             pending = false
@@ -42,16 +44,16 @@ class ChildCollectionViewController: UICollectionViewController, UICollectionVie
                             self.pendingTasks = tasksPending
                         }
                         
-//                        if let balance = object.objectForKey("moneyAvailable") as? Double {
-//                            moneyBalance = balance
-//                            self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
-//                        }
+                        if let balance = object.objectForKey("moneyEarned") as? Double {
+                            self.moneyEarned = balance
+                        }
                         
                         if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
                             self.completedTasks = tasksCompleted
                         }
 //                        self.data = self.pendingTasks
 //                        self.tasksTable.reloadData()
+                        self.moneyEarnedLabel.title = "$" + String(format:"%.2f", self.moneyEarned)
                         self.data = self.pendingTasks
                         self.collectionView?.reloadData()
                     }

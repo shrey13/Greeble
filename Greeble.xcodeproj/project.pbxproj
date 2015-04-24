@@ -40,6 +40,7 @@
 		89E1B89D1AEA2FED005C65DE /* History3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89E1B89C1AEA2FED005C65DE /* History3.jpg */; };
 		89E1B89F1AEA49E6005C65DE /* billabong.otf in Resources */ = {isa = PBXBuildFile; fileRef = 89E1B89E1AEA49E0005C65DE /* billabong.otf */; };
 		AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */; };
+		AD4A4F331AEA9556001E8FF3 /* us-dollar-512.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4A4F321AEA9556001E8FF3 /* us-dollar-512.png */; };
 		ADAF175B1AE990BF00485DC3 /* dollar .png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF175A1AE990BF00485DC3 /* dollar .png */; };
 		ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */; };
 		ADAF17611AEA0D4D00485DC3 /* mhall.png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF17601AEA0D4D00485DC3 /* mhall.png */; };
@@ -95,6 +96,7 @@
 		89E1B89C1AEA2FED005C65DE /* History3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = History3.jpg; sourceTree = "<group>"; };
 		89E1B89E1AEA49E0005C65DE /* billabong.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = billabong.otf; sourceTree = "<group>"; };
 		AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		AD4A4F321AEA9556001E8FF3 /* us-dollar-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "us-dollar-512.png"; sourceTree = "<group>"; };
 		ADAF175A1AE990BF00485DC3 /* dollar .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar .png"; sourceTree = "<group>"; };
 		ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
 		ADAF17601AEA0D4D00485DC3 /* mhall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mhall.png; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		891CAEAF1AE852210072B92B /* Greeble */ = {
 			isa = PBXGroup;
 			children = (
+				AD4A4F321AEA9556001E8FF3 /* us-dollar-512.png */,
 				89E1B88C1AEA29A5005C65DE /* HistoryViewController.swift */,
 				89E1B88D1AEA29A5005C65DE /* ProbablityViewController.swift */,
 				ADAF17621AEA1B8200485DC3 /* chicken.png */,
@@ -300,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4A4F331AEA9556001E8FF3 /* us-dollar-512.png in Resources */,
 				89E1B89D1AEA2FED005C65DE /* History3.jpg in Resources */,
 				89E1B8981AEA2DE7005C65DE /* History2.jpg in Resources */,
 				89E1B89B1AEA2DE7005C65DE /* Math3.jpg in Resources */,
