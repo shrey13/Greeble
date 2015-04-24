@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -400,7 +400,7 @@
                         <outlet property="password" destination="5ar-0e-jlU" id="yde-xA-0jb"/>
                         <outlet property="username" destination="89G-VU-Ozv" id="iJa-WY-i1h"/>
                         <segue destination="fjh-Af-eF8" kind="show" identifier="parentSegue" id="phf-XR-b2E"/>
-                        <segue destination="NTX-zY-BQS" kind="show" identifier="childSegue" id="y5w-Gl-Xfn"/>
+                        <segue destination="qwm-Qg-ya8" kind="show" identifier="childSegue" id="Q4a-Qg-dl3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -836,7 +836,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Wek-xp-792"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QfN-5I-sPZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar .png" translatesAutoresizingMaskIntoConstraints="NO" id="jbf-xv-ldN">
@@ -950,9 +950,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nwh-EK-o7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085.25" y="-358.5"/>
+            <point key="canvasLocation" x="1097.25" y="-968.5"/>
         </scene>
-        <!--Probablity View Controller-->
+        <!--Greeble-->
         <scene sceneID="pv7-4q-tPr">
             <objects>
                 <viewController id="0X4-TI-eLT" customClass="ProbablityViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
@@ -961,19 +961,9 @@
                         <viewControllerLayoutGuide type="bottom" id="TXp-E9-zGr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z1y-z2-0tG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-Fo-9cj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Greeble" id="l5Q-SF-YVr">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="QKw-KV-eJC"/>
-                                    </navigationItem>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                </variation>
-                            </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwC-7k-Cqe">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1030,7 +1020,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="m5h-Fo-9cj"/>
                                 <exclude reference="VwC-7k-Cqe"/>
                                 <exclude reference="YAK-6m-4vc"/>
                                 <exclude reference="eXz-bK-62U"/>
@@ -1040,7 +1029,6 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="m5h-Fo-9cj"/>
                                 <include reference="VwC-7k-Cqe"/>
                                 <include reference="YAK-6m-4vc"/>
                                 <include reference="eXz-bK-62U"/>
@@ -1049,6 +1037,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Greeble" id="nXD-Dj-W46"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dontSwitchButton" destination="eXz-bK-62U" id="Z5K-BL-IR9"/>
@@ -1058,9 +1047,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKS-jD-nN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676.25" y="-392.5"/>
+            <point key="canvasLocation" x="1910.25" y="470.5"/>
         </scene>
-        <!--History View Controller-->
+        <!--Greeble-->
         <scene sceneID="iMG-UL-Thv">
             <objects>
                 <viewController id="WjE-VL-p1q" customClass="HistoryViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
@@ -1069,19 +1058,9 @@
                         <viewControllerLayoutGuide type="bottom" id="Avf-cJ-hRn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rVo-Uq-wnm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeJ-Sd-jqS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Greeble" id="VCx-Lo-FiO">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="RuE-NK-e4U"/>
-                                    </navigationItem>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                </variation>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken.png" translatesAutoresizingMaskIntoConstraints="NO" id="ub7-wK-Xpf">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1127,7 +1106,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="BeJ-Sd-jqS"/>
                                 <exclude reference="ub7-wK-Xpf"/>
                                 <exclude reference="h51-Pj-yqg"/>
                                 <exclude reference="Gyo-Yb-hI1"/>
@@ -1136,7 +1114,6 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="BeJ-Sd-jqS"/>
                                 <include reference="ub7-wK-Xpf"/>
                                 <include reference="h51-Pj-yqg"/>
                                 <include reference="Gyo-Yb-hI1"/>
@@ -1144,6 +1121,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Greeble" id="nYD-Rm-TxB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="chickenButton" destination="h51-Pj-yqg" id="oEQ-y9-mGo"/>
@@ -1153,7 +1131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZk-tB-qGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273.25" y="-392.5"/>
+            <point key="canvasLocation" x="2648.25" y="470.5"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="vro-3E-oSu">
@@ -1264,33 +1242,14 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="251.25" y="-42.5"/>
+            <point key="canvasLocation" x="68.25" y="-366.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ZSM-qi-zLX">
-            <objects>
-                <viewController id="NTX-zY-BQS" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JkP-VF-jW0"/>
-                        <viewControllerLayoutGuide type="bottom" id="kpS-19-Fa7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7KG-SM-mLK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QiH-Ge-eNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="283.5" y="740"/>
-        </scene>
-        <!--Greeble-->
+        <!--Home-->
         <scene sceneID="EKt-1Q-Rkh">
             <objects>
                 <collectionViewController id="LIV-b4-WfQ" customClass="ChildCollectionViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dpa-e1-Z1d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LIF-vu-R2A">
@@ -1360,12 +1319,16 @@
                             <outlet property="delegate" destination="LIV-b4-WfQ" id="i4c-lj-bnk"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Greeble" id="XCA-Yi-TY6"/>
+                    <navigationItem key="navigationItem" title="Home" id="XCA-Yi-TY6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="0X4-TI-eLT" kind="show" identifier="probabilitySegue" id="rai-7E-IhD"/>
+                        <segue destination="WjE-VL-p1q" kind="show" identifier="historySegue" id="wGQ-Ba-8mt"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usb-oF-LNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971.75" y="1252.5"/>
+            <point key="canvasLocation" x="1257.75" y="807.5"/>
         </scene>
         <!--Add Tasks View Controller-->
         <scene sceneID="UWv-tn-FQA">
@@ -1464,7 +1427,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1104.75" y="477.5"/>
+            <point key="canvasLocation" x="1137.75" y="-168.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sHc-mv-w03">
@@ -1482,7 +1445,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HB3-0i-tPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053" y="1252"/>
+            <point key="canvasLocation" x="402" y="808"/>
         </scene>
     </scenes>
     <resources>

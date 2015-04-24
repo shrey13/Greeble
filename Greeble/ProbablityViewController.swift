@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class ProbablityViewController: UIViewController {
 
     @IBOutlet var switchButton: UIButton!
@@ -20,6 +20,47 @@ class ProbablityViewController: UIViewController {
             switchButton.setTitleColor(UIColor.greenColor(), forState:UIControlState.Normal)
             
             dontSwitchButton.setTitleColor(UIColor.redColor(), forState:UIControlState.Normal)
+            
+            var currentUser = PFUser.currentUser()
+            var userID:String = currentUser!.objectForKey("username") as! String
+            var queryTasks = PFQuery(className: "Tasks")
+            queryTasks.whereKey("children", equalTo:userID)
+            queryTasks.findObjectsInBackgroundWithBlock {
+                (objects: [AnyObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    println("Successfully retrieved \(objects!.count) scores.")
+                    // Do something with the found objects
+                    if let objects = objects as? [PFObject] {
+                        for object in objects {
+                            
+                            if let tasksPending = object.objectForKey("pendingTasks") as? [String] {
+                                var pendingTasks = tasksPending
+                                pendingTasks.removeAtIndex(find(pendingTasks, "Math")!)
+                                object["pendingTasks"] = pendingTasks
+                            }
+                            
+//                            if let balance = object.objectForKey("moneyAvailable") as? Double {
+//                                moneyBalance = balance
+//                                self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
+//                            }
+    
+                            if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
+                                var completedTasks = tasksCompleted
+                                completedTasks.append("Math")
+                                object["completedTasks"] = completedTasks
+                            } else {
+                                object["completedTasks"] = ["Math"]
+                            }
+                            object.saveInBackground()
+                        }
+                    }
+                } else {
+                    // Log details of the failure
+                    println("Error: \(error) \(error!.userInfo!)")
+                }
+            }
+            
         }
         else{
             switchButton.hidden = true
@@ -33,6 +74,46 @@ class ProbablityViewController: UIViewController {
         switchButton.setTitleColor(UIColor.greenColor(), forState:UIControlState.Normal)
             
             dontSwitchButton.setTitleColor(UIColor.redColor(), forState:UIControlState.Normal)
+            
+            var currentUser = PFUser.currentUser()
+            var userID:String = currentUser!.objectForKey("username") as! String
+            var queryTasks = PFQuery(className: "Tasks")
+            queryTasks.whereKey("children", equalTo:userID)
+            queryTasks.findObjectsInBackgroundWithBlock {
+                (objects: [AnyObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    println("Successfully retrieved \(objects!.count) scores.")
+                    // Do something with the found objects
+                    if let objects = objects as? [PFObject] {
+                        for object in objects {
+                            
+                            if let tasksPending = object.objectForKey("pendingTasks") as? [String] {
+                                var pendingTasks = tasksPending
+                                pendingTasks.removeAtIndex(find(pendingTasks, "Math")!)
+                                object["pendingTasks"] = pendingTasks
+                            }
+                            
+                            //                            if let balance = object.objectForKey("moneyAvailable") as? Double {
+                            //                                moneyBalance = balance
+                            //                                self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
+                            //                            }
+                            
+                            if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
+                                var completedTasks = tasksCompleted
+                                completedTasks.append("Math")
+                                object["completedTasks"] = completedTasks
+                            } else {
+                                object["completedTasks"] = ["Math"]
+                            }
+                            object.saveInBackground()
+                        }
+                    }
+                } else {
+                    // Log details of the failure
+                    println("Error: \(error) \(error!.userInfo!)")
+                }
+            }
         }
         else{
             switchButton.hidden = true
