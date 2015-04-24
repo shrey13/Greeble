@@ -36,6 +36,7 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
                         var newTask = PFObject(className:"Tasks")
                         newTask["pendingTasks"] = self.pendingTasks
                         newTask["parent"] = userID
+                        newTask["children"] = "shrey"
                         newTask.saveInBackgroundWithBlock {
                             (success: Bool, error: NSError?) -> Void in
                             if (success) {
@@ -59,9 +60,11 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
                     // Log details of the failure
                     println("Error: \(error) \(error!.userInfo!)")
                 }
+                self.performSegueWithIdentifier("doneAddingSegue", sender: nil)
             }
+            
         }
-        self.performSegueWithIdentifier("doneAddingSegue", sender: nil)
+        
     }
     
     override func viewDidLoad() {

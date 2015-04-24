@@ -69,16 +69,19 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         
                         if let balance = object.objectForKey("moneyAvailable") as? Double {
                             moneyBalance = balance
-                            self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
+                            
                         }
                         
                         if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
                             self.completedTasks = tasksCompleted
                         }
+//                        self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
                         self.data = self.pendingTasks
+                        println(self.data)
                         self.tasksTable.reloadData()
                     }
                 }
+                self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
             } else {
                 // Log details of the failure
                 println("Error: \(error) \(error!.userInfo!)")
