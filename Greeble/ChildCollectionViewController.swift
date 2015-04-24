@@ -3,8 +3,25 @@ import Parse
 let reuseIdentifier = "collCell"
 
 class ChildCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+    let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
+    var data = [String]()
     var pendingTasks = [String]()
+    var completedTasks = [String]()
+    var pending = true
+    
+    @IBAction func taskType(sender: AnyObject) {
+        if pending {
+            pending = false
+            data = completedTasks
+            self.collectionView?.reloadData()
+        } else {
+            pending = true
+            data = pendingTasks
+            self.collectionView?.reloadData()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,12 +47,12 @@ class ChildCollectionViewController: UICollectionViewController, UICollectionVie
 //                            self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
 //                        }
                         
-//                        if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
-//                            self.completedTasks = tasksCompleted
-//                        }
+                        if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
+                            self.completedTasks = tasksCompleted
+                        }
 //                        self.data = self.pendingTasks
 //                        self.tasksTable.reloadData()
-                        
+                        self.data = self.pendingTasks
                         self.collectionView?.reloadData()
                     }
                 }
@@ -61,13 +78,17 @@ class ChildCollectionViewController: UICollectionViewController, UICollectionVie
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return self.pendingTasks.count
+        if pending {
+            return self.pendingTasks.count
+        } else {
+            return self.completedTasks.count
+        }
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CollectionViewCell
         println(cell.description)
-        cell.title.text = self.pendingTasks[indexPath.row]
+        cell.title.text = self.data[indexPath.row]
         var imageExtension = "History1.jpg"
         let random = Int(arc4random_uniform(3))+1
         if cell.title.text == "Math" {

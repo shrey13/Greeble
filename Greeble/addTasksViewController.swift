@@ -13,7 +13,7 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tasksTable: UITableView!
     
-    var data = ["Math", "History", "Sex Ed"]
+    var data = ["Math", "History"]
     var selectedTasks:[String] = []
     var pendingTasks:[String] = []
     var searchActive : Bool = false

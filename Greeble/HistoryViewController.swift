@@ -122,8 +122,14 @@ class HistoryViewController: UIViewController {
     }
     
     @IBOutlet var eggClick: UIButton!
+    
+    @IBOutlet var navigationBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationBar.topItem?.title = "Greeble"
+        self.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Billabong", size: 34)!,  NSForegroundColorAttributeName: UIColor.redColor()]
+
         solutionText.hidden = true;
 
 
@@ -135,6 +141,10 @@ class HistoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+//        self.navigationController?.navigationBar.topItem?.title = "Greeble"
+//        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Billabong", size: 34)!,  NSForegroundColorAttributeName: UIColor.redColor()]
+    }
 
     /*
     // MARK: - Navigation

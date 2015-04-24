@@ -5,6 +5,11 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="billabong.otf">
+            <string>Billabong</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -40,30 +45,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Greeble!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JW-AL-PH6">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="5MW-ke-j8J"/>
-                                    <constraint firstAttribute="width" constant="228" id="Dvq-ns-JfJ">
-                                        <variation key="widthClass=compact" constant="219"/>
-                                    </constraint>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5MW-ke-j8J"/>
-                                        <exclude reference="Dvq-ns-JfJ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="5MW-ke-j8J"/>
-                                        <include reference="Dvq-ns-JfJ"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-Zu-zx0">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -248,6 +229,33 @@
                                     <action selector="signUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wVs-Mb-1sn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Greeble!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JW-AL-PH6">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5MW-ke-j8J">
+                                        <variation key="widthClass=compact" constant="38"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="228" id="Dvq-ns-JfJ">
+                                        <variation key="widthClass=compact" constant="220"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5MW-ke-j8J"/>
+                                        <exclude reference="Dvq-ns-JfJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="77" y="155" width="220" height="40"/>
+                                    <mask key="constraints">
+                                        <include reference="5MW-ke-j8J"/>
+                                        <include reference="Dvq-ns-JfJ"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -306,7 +314,6 @@
                             <mask key="subviews">
                                 <exclude reference="6Y8-ZU-ZVJ"/>
                                 <exclude reference="Be8-5F-aCc"/>
-                                <exclude reference="9JW-AL-PH6"/>
                                 <exclude reference="dOj-Zu-zx0"/>
                                 <exclude reference="89G-VU-Ozv"/>
                                 <exclude reference="5ar-0e-jlU"/>
@@ -314,6 +321,7 @@
                                 <exclude reference="j1C-9f-z2w"/>
                                 <exclude reference="dnZ-en-8O9"/>
                                 <exclude reference="sG2-gb-v86"/>
+                                <exclude reference="9JW-AL-PH6"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="TXR-LL-p3X"/>
@@ -352,7 +360,6 @@
                             <mask key="subviews">
                                 <include reference="6Y8-ZU-ZVJ"/>
                                 <include reference="Be8-5F-aCc"/>
-                                <include reference="9JW-AL-PH6"/>
                                 <include reference="dOj-Zu-zx0"/>
                                 <include reference="89G-VU-Ozv"/>
                                 <include reference="5ar-0e-jlU"/>
@@ -360,6 +367,7 @@
                                 <include reference="j1C-9f-z2w"/>
                                 <include reference="dnZ-en-8O9"/>
                                 <include reference="sG2-gb-v86"/>
+                                <include reference="9JW-AL-PH6"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="TXR-LL-p3X"/>
@@ -400,7 +408,7 @@
                         <outlet property="password" destination="5ar-0e-jlU" id="yde-xA-0jb"/>
                         <outlet property="username" destination="89G-VU-Ozv" id="iJa-WY-i1h"/>
                         <segue destination="fjh-Af-eF8" kind="show" identifier="parentSegue" id="phf-XR-b2E"/>
-                        <segue destination="qwm-Qg-ya8" kind="show" identifier="childSegue" id="Q4a-Qg-dl3"/>
+                        <segue destination="dyL-yI-JBA" kind="show" identifier="childSegue" id="lJj-2H-cw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -836,7 +844,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Wek-xp-792"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QfN-5I-sPZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar .png" translatesAutoresizingMaskIntoConstraints="NO" id="jbf-xv-ldN">
@@ -952,7 +960,7 @@
             </objects>
             <point key="canvasLocation" x="1097.25" y="-968.5"/>
         </scene>
-        <!--Greeble-->
+        <!--Probablity View Controller-->
         <scene sceneID="pv7-4q-tPr">
             <objects>
                 <viewController id="0X4-TI-eLT" customClass="ProbablityViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
@@ -964,7 +972,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwC-7k-Cqe">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwC-7k-Cqe">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">You are in a game show and are given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say Door No.1 and the host, who knows what's behind the doors, opens another door, say Door No.3 which has a goat. He then asks you, "Do you want to pick Door No. 2?" Is it to your advantage to switch your choice?</string>
@@ -1016,6 +1024,21 @@
                                     <rect key="frame" x="67" y="505" width="240" height="89"/>
                                 </variation>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-61-ggQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Greeble" id="zcu-Rv-DwB">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="UHm-6R-b4o">
+                                            <connections>
+                                                <segue destination="LIV-b4-WfQ" kind="show" id="gQ3-Tq-3gh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -1025,6 +1048,7 @@
                                 <exclude reference="eXz-bK-62U"/>
                                 <exclude reference="dmt-sm-YL1"/>
                                 <exclude reference="HJE-3e-LcR"/>
+                                <exclude reference="eCZ-61-ggQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1034,10 +1058,11 @@
                                 <include reference="eXz-bK-62U"/>
                                 <include reference="dmt-sm-YL1"/>
                                 <include reference="HJE-3e-LcR"/>
+                                <include reference="eCZ-61-ggQ"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Greeble" id="nXD-Dj-W46"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dontSwitchButton" destination="eXz-bK-62U" id="Z5K-BL-IR9"/>
@@ -1047,9 +1072,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKS-jD-nN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910.25" y="470.5"/>
+            <point key="canvasLocation" x="2297.25" y="637.5"/>
         </scene>
-        <!--Greeble-->
+        <!--History View Controller-->
         <scene sceneID="iMG-UL-Thv">
             <objects>
                 <viewController id="WjE-VL-p1q" customClass="HistoryViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
@@ -1102,6 +1127,21 @@
                                     <rect key="frame" x="37" y="435" width="301" height="155"/>
                                 </variation>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDt-HN-cgX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Greeble" id="Zke-Es-6Kx">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="yww-6O-SbX">
+                                            <connections>
+                                                <segue destination="LIV-b4-WfQ" kind="show" id="38c-CS-nU5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -1110,6 +1150,7 @@
                                 <exclude reference="h51-Pj-yqg"/>
                                 <exclude reference="Gyo-Yb-hI1"/>
                                 <exclude reference="XvC-CH-n0h"/>
+                                <exclude reference="yDt-HN-cgX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1118,20 +1159,21 @@
                                 <include reference="h51-Pj-yqg"/>
                                 <include reference="Gyo-Yb-hI1"/>
                                 <include reference="XvC-CH-n0h"/>
+                                <include reference="yDt-HN-cgX"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Greeble" id="nYD-Rm-TxB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="chickenButton" destination="h51-Pj-yqg" id="oEQ-y9-mGo"/>
                         <outlet property="eggButton" destination="Gyo-Yb-hI1" id="fF4-zh-Ea2"/>
+                        <outlet property="navigationBar" destination="yDt-HN-cgX" id="ag3-TW-rcl"/>
                         <outlet property="solutionText" destination="XvC-CH-n0h" id="Uvl-hv-bSn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZk-tB-qGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2648.25" y="470.5"/>
+            <point key="canvasLocation" x="1971.75" y="1309.5"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="vro-3E-oSu">
@@ -1244,68 +1286,77 @@
             </objects>
             <point key="canvasLocation" x="68.25" y="-366.5"/>
         </scene>
-        <!--Home-->
+        <!--Child Collection View Controller-->
         <scene sceneID="EKt-1Q-Rkh">
             <objects>
                 <collectionViewController id="LIV-b4-WfQ" customClass="ChildCollectionViewController" customModule="Greeble" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dpa-e1-Z1d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.80430763959884644" green="0.26698407530784607" blue="0.26201966404914856" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LIF-vu-R2A">
-                            <size key="itemSize" width="181" height="309"/>
+                            <size key="itemSize" width="180" height="309"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collCell" id="v2i-vf-gZx" customClass="CollectionViewCell" customModule="Greeble" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="181" height="309"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="309"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-No-6JA">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="180" id="eI3-ay-qR9"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="eI3-ay-qR9"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="180" height="254"/>
-                                                <mask key="constraints">
-                                                    <include reference="eI3-ay-qR9"/>
-                                                </mask>
-                                            </variation>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfa-Ri-HDp">
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999999999999991" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfa-Ri-HDp">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="262" width="180" height="47"/>
+                                                <rect key="frame" x="0.0" y="262" width="180" height="39"/>
                                             </variation>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="History2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-No-6JA">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="254" id="dre-mJ-uW9">
+                                                    <variation key="widthClass=compact" constant="260"/>
+                                                </constraint>
+                                                <constraint firstAttribute="width" constant="180" id="eI3-ay-qR9"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="jXQ-Fe-Bdm"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="dre-mJ-uW9"/>
+                                                    <exclude reference="eI3-ay-qR9"/>
+                                                    <exclude reference="jXQ-Fe-Bdm"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact" ambiguous="YES">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="260"/>
+                                                <mask key="constraints">
+                                                    <include reference="dre-mJ-uW9"/>
+                                                    <include reference="eI3-ay-qR9"/>
+                                                    <exclude reference="jXQ-Fe-Bdm"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="q3e-No-6JA"/>
                                         <exclude reference="gfa-Ri-HDp"/>
+                                        <exclude reference="q3e-No-6JA"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
-                                        <include reference="q3e-No-6JA"/>
                                         <include reference="gfa-Ri-HDp"/>
+                                        <include reference="q3e-No-6JA"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -1319,7 +1370,21 @@
                             <outlet property="delegate" destination="LIV-b4-WfQ" id="i4c-lj-bnk"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Home" id="XCA-Yi-TY6"/>
+                    <navigationItem key="navigationItem" id="hdo-gC-gUl">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="GLA-9z-xjC">
+                            <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Pending"/>
+                                <segment title="Completed"/>
+                            </segments>
+                            <color key="tintColor" red="0.80430763959999996" green="0.26698407530000001" blue="0.26201966399999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="taskType:" destination="LIV-b4-WfQ" eventType="valueChanged" id="tVP-wX-XcU"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="0X4-TI-eLT" kind="show" identifier="probabilitySegue" id="rai-7E-IhD"/>
@@ -1328,7 +1393,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usb-oF-LNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257.75" y="807.5"/>
+            <point key="canvasLocation" x="1151.25" y="526.5"/>
         </scene>
         <!--Add Tasks View Controller-->
         <scene sceneID="UWv-tn-FQA">
@@ -1427,28 +1492,33 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1137.75" y="-168.5"/>
+            <point key="canvasLocation" x="2018.25" y="-168.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="sHc-mv-w03">
+        <scene sceneID="tzf-ul-RsC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qwm-Qg-ya8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dyL-yI-JBA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vek-iR-9of">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j3C-GJ-uHs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1oS-Ci-FN6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="LIV-b4-WfQ" kind="relationship" relationship="rootViewController" id="eW5-pc-CmL"/>
+                        <segue destination="LIV-b4-WfQ" kind="relationship" relationship="rootViewController" id="Vcc-xQ-rqp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HB3-0i-tPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rd3-vS-BE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="808"/>
+            <point key="canvasLocation" x="234.75" y="526.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="History2.jpg" width="661" height="984"/>
         <image name="chicken.png" width="740" height="395"/>
         <image name="dollar .png" width="512" height="512"/>
         <image name="login_background" width="917" height="1000"/>
@@ -1456,6 +1526,7 @@
         <image name="mhall.png" width="300" height="375"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="38c-CS-nU5"/>
         <segue reference="phf-XR-b2E"/>
     </inferredMetricsTieBreakers>
 </document>
