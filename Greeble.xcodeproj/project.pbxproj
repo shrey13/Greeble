@@ -28,6 +28,8 @@
 		891CAEED1AE88B000072B92B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 891CAEEC1AE88B000072B92B /* libsqlite3.dylib */; };
 		891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEF31AE8CAC20072B92B /* SignUp.swift */; };
 		89C90F7F1AE9EF49003D3F4D /* addTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C90F7E1AE9EF49003D3F4D /* addTasksViewController.swift */; };
+		89C90F831AEA123A003D3F4D /* ChildCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C90F821AEA123A003D3F4D /* ChildCollectionViewController.swift */; };
+		89C90F851AEA12E2003D3F4D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C90F841AEA12E2003D3F4D /* CollectionViewCell.swift */; };
 		AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */; };
 		ADAF175B1AE990BF00485DC3 /* dollar .png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF175A1AE990BF00485DC3 /* dollar .png */; };
 		ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */; };
@@ -70,6 +72,8 @@
 		891CAEEE1AE88B490072B92B /* Greeble-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Greeble-Bridging-Header.h"; sourceTree = "<group>"; };
 		891CAEF31AE8CAC20072B92B /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		89C90F7E1AE9EF49003D3F4D /* addTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTasksViewController.swift; sourceTree = "<group>"; };
+		89C90F821AEA123A003D3F4D /* ChildCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCollectionViewController.swift; sourceTree = "<group>"; };
+		89C90F841AEA12E2003D3F4D /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		ADAF175A1AE990BF00485DC3 /* dollar .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar .png"; sourceTree = "<group>"; };
 		ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				891CAEB01AE852210072B92B /* Supporting Files */,
 				891CAEF31AE8CAC20072B92B /* SignUp.swift */,
 				ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */,
+				89C90F821AEA123A003D3F4D /* ChildCollectionViewController.swift */,
+				89C90F841AEA12E2003D3F4D /* CollectionViewCell.swift */,
 			);
 			path = Greeble;
 			sourceTree = "<group>";
@@ -282,7 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C90F831AEA123A003D3F4D /* ChildCollectionViewController.swift in Sources */,
 				891CAEB51AE852210072B92B /* ViewController.swift in Sources */,
+				89C90F851AEA12E2003D3F4D /* CollectionViewCell.swift in Sources */,
 				89C90F7F1AE9EF49003D3F4D /* addTasksViewController.swift in Sources */,
 				891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */,
 				ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */,
