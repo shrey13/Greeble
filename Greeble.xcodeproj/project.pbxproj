@@ -27,8 +27,8 @@
 		891CAEEB1AE88AF70072B92B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 891CAEEA1AE88AF70072B92B /* libz.dylib */; };
 		891CAEED1AE88B000072B92B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 891CAEEC1AE88B000072B92B /* libsqlite3.dylib */; };
 		891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CAEF31AE8CAC20072B92B /* SignUp.swift */; };
+		89C90F7F1AE9EF49003D3F4D /* addTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C90F7E1AE9EF49003D3F4D /* addTasksViewController.swift */; };
 		AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */; };
-		ADAF17591AE9893500485DC3 /* addTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF17581AE9893500485DC3 /* addTasksViewController.swift */; };
 		ADAF175B1AE990BF00485DC3 /* dollar .png in Resources */ = {isa = PBXBuildFile; fileRef = ADAF175A1AE990BF00485DC3 /* dollar .png */; };
 		ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */; };
 /* End PBXBuildFile section */
@@ -69,8 +69,8 @@
 		891CAEEC1AE88B000072B92B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		891CAEEE1AE88B490072B92B /* Greeble-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Greeble-Bridging-Header.h"; sourceTree = "<group>"; };
 		891CAEF31AE8CAC20072B92B /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		89C90F7E1AE9EF49003D3F4D /* addTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTasksViewController.swift; sourceTree = "<group>"; };
 		AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
-		ADAF17581AE9893500485DC3 /* addTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTasksViewController.swift; sourceTree = "<group>"; };
 		ADAF175A1AE990BF00485DC3 /* dollar .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar .png"; sourceTree = "<group>"; };
 		ADAF175C1AE9950C00485DC3 /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,8 +139,8 @@
 		891CAEAF1AE852210072B92B /* Greeble */ = {
 			isa = PBXGroup;
 			children = (
+				89C90F7E1AE9EF49003D3F4D /* addTasksViewController.swift */,
 				AD1A55FA1AE9451300AC85EC /* ParentViewController.swift */,
-				ADAF17581AE9893500485DC3 /* addTasksViewController.swift */,
 				891CAED61AE88A840072B92B /* Parse.framework */,
 				891CAED41AE88A7B0072B92B /* Bolts.framework */,
 				891CAEB21AE852210072B92B /* AppDelegate.swift */,
@@ -283,8 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				891CAEB51AE852210072B92B /* ViewController.swift in Sources */,
+				89C90F7F1AE9EF49003D3F4D /* addTasksViewController.swift in Sources */,
 				891CAEF41AE8CAC20072B92B /* SignUp.swift in Sources */,
-				ADAF17591AE9893500485DC3 /* addTasksViewController.swift in Sources */,
 				ADAF175D1AE9950C00485DC3 /* MoneyViewController.swift in Sources */,
 				AD1A55FB1AE9451300AC85EC /* ParentViewController.swift in Sources */,
 				891CAEB31AE852210072B92B /* AppDelegate.swift in Sources */,

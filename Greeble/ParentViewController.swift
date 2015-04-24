@@ -7,23 +7,31 @@
 //
 
 import UIKit
+import Parse
+
+var moneyBalance:Double = 10
+var currentUser = PFUser.currentUser()
+var userID:String = currentUser!.objectForKey("username") as! String
 
 class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,
     UISearchBarDelegate{
     
     var pending = true
-    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+    var data = [String]()
+    var completedTasks = [String]()
+    var pendingTasks = [String]()
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tasksTable: UITableView!
+    @IBOutlet var balanceLabel: UIBarButtonItem!
     
     @IBAction func tableType(sender: AnyObject) {
         if pending {
             pending = false
-            data = ["MIT"]
+            data = completedTasks
             tasksTable.reloadData()
         } else {
             pending = true
-            data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+            data = pendingTasks
             tasksTable.reloadData()
         }
     }
@@ -36,11 +44,62 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         self.tasksTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
+        
+
+//        let tasksObject = PFObject(className: "Taks")
+//        testObject["foo"] = "bar"
+//        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+//            println("Object has been saved.")
+//        }
+
+        var queryTasks = PFQuery(className: "Tasks")
+        queryTasks.whereKey("parent", equalTo:userID)
+        queryTasks.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        
+                        if let tasksPending = object.objectForKey("pendingTasks") as? [String] {
+                            self.pendingTasks = tasksPending
+                        }
+                        
+                        if let balance = object.objectForKey("moneyAvailable") as? Double {
+                            moneyBalance = balance
+                            self.balanceLabel.title = "$" + String(format:"%.2f", moneyBalance)
+                        }
+                        
+                        if let tasksCompleted = object.objectForKey("completedTasks") as? [String] {
+                            self.completedTasks = tasksCompleted
+                        }
+                        self.data = self.pendingTasks
+                        self.tasksTable.reloadData()
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error!.userInfo!)")
+            }
+        }
+            
+            
+//            (success: PFObject?, error: NSError?) -> Void in
+//            if error == nil {
+//                let s = success!
+//                println(s["foo"])
+//                s["foo"] = "bars"
+//                s.saveInBackground()
+//            } else{
+//                println("Object has been saved.")
+//            }
+//        }
+        // Do any additional setup after loading the view.
         tasksTable.delegate = self
         tasksTable.dataSource = self
         searchBar.delegate = self
-
-        // Do any additional setup after loading the view.
     }
     
     

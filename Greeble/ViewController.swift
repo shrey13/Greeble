@@ -54,6 +54,13 @@ class ViewController: UIViewController {
                 if logInError == nil {
                     // Do stuff after successful login.
                     println("Logged In")
+                    if let isParent = user!.objectForKey("parent")! as? Bool {
+                        if isParent {
+                            self.performSegueWithIdentifier("parentSegue", sender: nil)
+                        } else {
+                            self.performSegueWithIdentifier("childSegue", sender: nil)
+                        }
+                    }
                 } else {
                     // The login failed. Check error to see why.
                     if let errorString = logInError!.userInfo?["error"] as? NSString {

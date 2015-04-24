@@ -7,17 +7,62 @@
 //
 
 import UIKit
-
+import Parse
 class addTasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tasksTable: UITableView!
     
-    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+    var data = ["Math", "History", "Sex Ed"]
     var selectedTasks:[String] = []
+    var pendingTasks:[String] = []
     var searchActive : Bool = false
     var filtered:[String] = []
     
+    
+    @IBAction func done(sender: AnyObject) {
+        println("Done Button")
+        println(selectedTasks.count)
+        if selectedTasks.count != 0 {
+            pendingTasks += selectedTasks
+            println("Done")
+            var queryTasks = PFQuery(className: "Tasks")
+            queryTasks.findObjectsInBackgroundWithBlock {
+                (objects: [AnyObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    if objects?.count == 0 {
+                        println("No objects")
+                        var newTask = PFObject(className:"Tasks")
+                        newTask["pendingTasks"] = self.pendingTasks
+                        newTask["parent"] = userID
+                        newTask.saveInBackgroundWithBlock {
+                            (success: Bool, error: NSError?) -> Void in
+                            if (success) {
+                                // The object has been saved.
+                                println("Added object")
+                            } else {
+                                // There was a problem, check error.description
+                                println("Error Adding")
+                            }
+                        }
+                    } else {
+                        // Do something with the found objects
+                        if let objects = objects as? [PFObject] {
+                            for object in objects { //TODO: Add for a specific child
+                                object["pendingTasks"] = self.pendingTasks
+                                object.saveInBackground()
+                            }
+                        }
+                    }
+                } else {
+                    // Log details of the failure
+                    println("Error: \(error) \(error!.userInfo!)")
+                }
+            }
+        }
+        self.performSegueWithIdentifier("doneAddingSegue", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +72,31 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
         tasksTable.delegate = self
         tasksTable.dataSource = self
         searchBar.delegate = self
-
         // Do any additional setup after loading the view.
+        
+        
+        
+        var queryTasks = PFQuery(className: "Tasks")
+        queryTasks.whereKey("parent", equalTo:userID)
+        queryTasks.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                // Do something with the found objects
+                println("Retrieving")
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        
+                        if let tasksPending = object.objectForKey("pendingTasks") as? [String] {
+                            self.pendingTasks = tasksPending
+                        }
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error!.userInfo!)")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,7 +164,7 @@ class addTasksViewController: UIViewController, UITableViewDelegate, UITableView
             cell.accessoryType = UITableViewCellAccessoryType.None
             selectedTasks.removeAtIndex(find(selectedTasks, cell.textLabel!.text!)!)
         }
-        println(selectedTasks)
+        //println(selectedTasks)
         tasksTable.deselectRowAtIndexPath(indexPath, animated: true)
         
     }

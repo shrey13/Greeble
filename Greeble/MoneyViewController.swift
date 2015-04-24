@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class MoneyViewController: UIViewController, UITextFieldDelegate {
 
@@ -14,14 +15,49 @@ class MoneyViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var balanceLabel: UILabel!
     @IBAction func confirmButton(sender: UIButton) {
-        
+        amountText.resignFirstResponder()
         var amountToBeAdded = (amountText.text as NSString).doubleValue
-        var currentBalance = (balanceLabel.text! as NSString).doubleValue
-        balanceLabel.text = String(format:"%.1f", (currentBalance + amountToBeAdded))
+        moneyBalance += amountToBeAdded
+        println(moneyBalance)
+        balanceLabel.text = "$" + String(format:"%.2f", moneyBalance)
+        balanceLabel.sizeToFit()
         amountText.text = "";
+        var queryTasks = PFQuery(className: "Tasks")
+        queryTasks.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                if objects?.count == 0 {
+                    println("No objects")
+                    var newTask = PFObject(className:"Tasks")
+                    newTask["moneyAvailable"] = moneyBalance
+                    newTask["parent"] = userID
+                    newTask.saveInBackgroundWithBlock {
+                        (success: Bool, error: NSError?) -> Void in
+                        if (success) {
+                            // The object has been saved.
+                            println("Added object")
+                        } else {
+                            // There was a problem, check error.description
+                            println("Error Adding")
+                        }
+                    }
+                } else {
+                    // Do something with the found objects
+                    if let objects = objects as? [PFObject] {
+                        for object in objects { //TODO: Add for a specific child
+                            object["moneyAvailable"] = moneyBalance
+                            object.saveInBackground()
+                        }
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error!.userInfo!)")
+            }
+        }
     }
     
-    @IBOutlet var confirmButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +65,8 @@ class MoneyViewController: UIViewController, UITextFieldDelegate {
         
         amountText.delegate = self
         amountText.keyboardType = .DecimalPad;
-        
+        balanceLabel.text = "$" + String(format:"%.2f", moneyBalance)
+        balanceLabel.sizeToFit()
         var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
         
