@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-var moneyBalance:Double = 10
+var moneyBalance:Double = 0.0
 var currentUser = PFUser.currentUser()
 var userID:String = currentUser!.objectForKey("username") as! String
 
